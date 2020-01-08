@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inicioFragment">
+
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="com.pjlabs.pages.InicioFragment"
+        android:label="fragment_inicio"
+        tools:layout="@layout/fragment_inicio"
+        app:startDestination="@id/action_inicioFragment_to_juegoFragmentFragment">
+        <action
+            android:id="@+id/action_inicioFragment_to_juegoFragmentFragment"
+            app:destination="@id/juegoFragmentFragment" />
+        <action
+            android:id="@+id/action_inicioFragment_to_migracionFragment"
+            app:destination="@id/migracionFragment" />
+        <action
+            android:id="@+id/action_inicioFragment_self"
+            app:destination="@id/inicioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/juegoFragmentFragment"
+        android:name="com.pjlabs.pages.JuegoFragmentFragment"
+        android:label="JuegoFragmentFragment" >
+        <action
+            android:id="@+id/action_juegoFragmentFragment_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
+        <action
+            android:id="@+id/action_juegoFragmentFragment_self"
+            app:destination="@id/juegoFragmentFragment" />
+        <action
+            android:id="@+id/action_juegoFragmentFragment_to_migracionFragment"
+            app:destination="@id/migracionFragment" />
+        <action
+            android:id="@+id/action_juegoFragmentFragment_to_juegoExplicacionFragment"
+            app:destination="@id/juegoExplicacionFragment" />
+        <action
+            android:id="@+id/action_juegoFragmentFragment_to_juegoBuscadorFragment"
+            app:destination="@id/juegoBuscadorFragment" />
+        <action
+            android:id="@+id/action_juegoFragmentFragment_self2"
+            app:destination="@id/juegoFragmentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/migracionFragment"
+        android:name="com.pjlabs.pages.MigracionFragment"
+        android:label="MigracionFragment" >
+        <action
+            android:id="@+id/action_migracionFragment_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
+        <action
+            android:id="@+id/action_migracionFragment_self"
+            app:destination="@id/migracionFragment" />
+        <action
+            android:id="@+id/action_migracionFragment_to_juegoFragmentFragment"
+            app:destination="@id/juegoFragmentFragment" />
+        <action
+            android:id="@+id/action_migracionFragment_to_migracionInformacionHaiti"
+            app:destination="@id/migracionInformacionHaiti" />
+        <action
+            android:id="@+id/action_migracionFragment_to_migracionComunidadChile"
+            app:destination="@id/migracionComunidadChile" />
+    </fragment>
+    <fragment
+        android:id="@+id/juegoExplicacionFragment"
+        android:name="com.pjlabs.pages.JuegoExplicacionFragment"
+        android:label="JuegoExplicacionFragment" >
+        <action
+            android:id="@+id/action_juegoExplicacionFragment_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
+        <action
+            android:id="@+id/action_juegoExplicacionFragment_to_juegoFragmentFragment"
+            app:destination="@id/juegoFragmentFragment" />
+        <action
+            android:id="@+id/action_juegoExplicacionFragment_to_migracionFragment"
+            app:destination="@id/migracionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/juegoBuscadorFragment"
+        android:name="com.pjlabs.pages.JuegoBuscadorFragment"
+        android:label="fragment_juego_buscador"
+        tools:layout="@layout/fragment_juego_buscador" >
+        <action
+            android:id="@+id/action_juegoBuscadorFragment_to_juegoFragmentFragment"
+            app:destination="@id/juegoFragmentFragment" />
+        <action
+            android:id="@+id/action_juegoBuscadorFragment_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
+        <action
+            android:id="@+id/action_juegoBuscadorFragment_to_migracionFragment"
+            app:destination="@id/migracionFragment" />
+        <action
+            android:id="@+id/action_juegoBuscadorFragment_to_juegoDetalleFragment"
+            app:destination="@id/juegoDetalleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/juegoDetalleFragment"
+        android:name="com.pjlabs.pages.JuegoDetalleFragment"
+        android:label="fragment_juego_detalle"
+        tools:layout="@layout/fragment_juego_detalle" >
+        <action
+            android:id="@+id/action_juegoDetalleFragment_to_juegoFragmentFragment"
+            app:destination="@id/juegoFragmentFragment" />
+        <action
+            android:id="@+id/action_juegoDetalleFragment_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
+        <action
+            android:id="@+id/action_juegoDetalleFragment_to_migracionFragment"
+            app:destination="@id/migracionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/migracionInformacionHaiti"
+        android:name="com.pjlabs.pages.MigracionInformacionHaiti"
+        android:label="MigracionInformacionHaiti" >
+        <action
+            android:id="@+id/action_migracionInformacionHaiti_to_migracionFragment"
+            app:destination="@id/migracionFragment" />
+        <action
+            android:id="@+id/action_migracionInformacionHaiti_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
+        <action
+            android:id="@+id/action_migracionInformacionHaiti_to_juegoFragmentFragment"
+            app:destination="@id/juegoFragmentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/migracionComunidadChile"
+        android:name="com.pjlabs.pages.MigracionComunidadChile"
+        android:label="MigracionComunidadChile" >
+        <action
+            android:id="@+id/action_migracionComunidadChile_to_migracionFragment"
+            app:destination="@id/migracionFragment" />
+        <action
+            android:id="@+id/action_migracionComunidadChile_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
+        <action
+            android:id="@+id/action_migracionComunidadChile_to_juegoFragmentFragment"
+            app:destination="@id/juegoFragmentFragment" />
+    </fragment>
+</navigation>
